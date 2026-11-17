@@ -32,6 +32,8 @@
 </head>
 <body>
   <a class="skip" href="#work">Skip to work</a>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="progress" aria-hidden="true"></div>
 
   <header class="top">
     <div class="wrap top-inner">
@@ -40,7 +42,6 @@
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#record">Record</a>
-        <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -59,13 +60,18 @@
           Lexminds and Kaizen. Most of my work sits where a statute meets a codebase.
         </p>
       </div>
-      <figure class="portrait">
-        <picture>
-          <source srcset="assets/prem.webp" type="image/webp" />
-          <img src="assets/prem.jpg" alt="Prem Singh, black and white portrait" width="680" height="786" fetchpriority="high" />
-        </picture>
-        <figcaption><span>Prem Singh</span><span>Jammu, 2026</span></figcaption>
-      </figure>
+      <div class="stage">
+        <figure class="portrait float">
+          <picture>
+            <source srcset="assets/prem.webp" type="image/webp" />
+            <img src="assets/prem.jpg" alt="Prem Singh, black and white portrait" width="680" height="786" fetchpriority="high" />
+          </picture>
+          <figcaption><span>Prem Singh</span><span>Jammu, 2026</span></figcaption>
+        </figure>
+        <div class="tag tag-a float-b"><small>Studying</small>B.A. LL.B. (Hons.)<em>University of Jammu</em></div>
+        <div class="tag tag-b float-c"><small>Founder</small>WebCompliance.in</div>
+        <div class="tag tag-c float-b"><small>Ventures</small>4 started</div>
+      </div>
     </section>
 
     <section class="wrap roles" aria-label="Current roles">
@@ -221,18 +227,6 @@
       </div>
     </section>
 
-    <!-- Writing -->
-    <section id="writing" class="wrap section">
-      <header class="sec-head">
-        <h2>Writing</h2>
-        <p>Short briefs on law and technology.</p>
-      </header>
-      <ul class="writing">
-        <li><time datetime="2026-06-08">Jun 2026</time><span class="w-title">The code is the law? Smart contracts and jurisprudence</span><span class="w-tag">Law</span></li>
-        <li><time datetime="2026-05-24">May 2026</time><span class="w-title">Digital governance: data protection laws in the age of LLMs</span><span class="w-tag">Research</span></li>
-        <li><time datetime="2026-04-15">Apr 2026</time><span class="w-title">Refactoring legislation: statutes as structured code</span><span class="w-tag">Essay</span></li>
-      </ul>
-    </section>
 
     <!-- Contact -->
     <section id="contact" class="wrap contact">
