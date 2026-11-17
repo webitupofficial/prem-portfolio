@@ -2,7 +2,7 @@ document.documentElement.classList.add('js');
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const nav = document.querySelector('.nav');
+const nav = document.querySelector('.nav-shell');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
