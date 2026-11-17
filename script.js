@@ -1,20 +1,20 @@
 document.documentElement.classList.add('js');
-
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const nav = document.querySelector('.nav-shell');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+const header = document.querySelector('.top');
+const onScroll = () => header.classList.toggle('lined', window.scrollY > 4);
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
-const items = document.querySelectorAll('.reveal');
+const els = document.querySelectorAll('.item, .about-grid, .record-grid, .writing li');
+els.forEach((el) => el.classList.add('rise'));
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
+    for (const e of entries) {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  items.forEach((el) => io.observe(el));
+    }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  els.forEach((el) => io.observe(el));
 } else {
-  items.forEach((el) => el.classList.add('in'));
+  els.forEach((el) => el.classList.add('in'));
 }
